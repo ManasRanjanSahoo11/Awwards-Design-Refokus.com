@@ -3,7 +3,7 @@ import Btn from './Btn'
 
 function NavBar() {
     return (
-        <div className='max-w-screen-xl mx-auto px-2 py-5 border-b flex items-center justify-between'>
+        <div className='max-w-screen-xl mx-auto px-1 py-5 border-b flex items-center justify-between'>
             <div className='flex items-center gap-10'>
                 <svg width="2%" height="2%" viewBox="0 0 15 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0.491027 5.74153C1.14573 5.12319 2.20721 5.1232 2.86191 5.74153L14.0384 16.2971C14.6931 16.9154 14.6931 17.9179 14.0384 18.5363C13.3837 19.1546 12.3222 19.1546 11.6675 18.5363L0.491027 7.9807C-0.163676 7.36237 -0.163676 6.35985 0.491027 5.74153Z" fill="currentColor"></path>

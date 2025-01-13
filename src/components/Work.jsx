@@ -48,7 +48,7 @@ function Work() {
     ]
 
     return (
-        <div className='w-full my-5'>
+        <div className='w-full my-12'>
             <div className='relative max-w-screen-xl mx-auto text-center'>
                 <h1 className='text-[30vw] select-none leading-none tracking-tight'>Work</h1>
                 <div className='absolute w-full h-full top-0'>
