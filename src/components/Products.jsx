@@ -54,7 +54,7 @@ function Products() {
           initial={{ y: pos, x: "50%" }}
           animate={{ y: pos + `rem` }}
           transition={{ease: [0.64, 0, 0.78, 0], duration:.3}}
-          className='absolute h-[20rem] w-[23rem] left-[14%]  overflow-hidden rounded-lg'>
+          className='absolute h-[20rem] w-[23rem] left-[10%]  overflow-hidden rounded-lg'>
           <motion.div animate={{y:-pos+`rem`}} className='h-full w-full '>
             <video autoPlay loop muted className='w-full h-full object-cover' src="https://files.refokus.com/storage/v1/object/public/Portfolio%20Videos/cula-43.webm"></video>
           </motion.div>
