@@ -27,7 +27,7 @@ function Stripes() {
     ]
 
     return (
-        <div className='flex my-10'>
+        <div className='flex'>
             {
                 data.map((elem, index) => (
                     <Stripe key={index} val={elem} />

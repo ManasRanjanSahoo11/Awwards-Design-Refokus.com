@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { motion, useMotionValueEvent, useScroll } from "motion/react"
 
 function Work() {
 
-    const images = [
+
+
+    const [images, setImages] = useState([
         {
             url: "https://images.unsplash.com/photo-1610415392843-30d95191b7e4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D",
             top: "50%",
             left: "50%",
-            isActive: true
+            isActive: false
         },
         {
             url: "https://images.unsplash.com/photo-1719937051157-d3d81cc28e86?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -45,7 +48,38 @@ function Work() {
             left: "47%",
             isActive: false
         },
-    ]
+    ])
+
+    const { scrollYProgress } = useScroll()
+
+    function showImages(arr) {
+        setImages((prev) => {
+             return prev.map((item, index)=>(
+                arr.indexOf(index) == -1 
+                ? {...item, isActive:false}
+                : {...item, isActive:true}
+             ))
+        })
+    }
+
+    scrollYProgress.on("change", (latest) => {
+        switch (Math.floor(latest * 100)) {
+            case 0: showImages([]);
+                break
+            case 1: showImages([0]);
+                break
+            case 3: showImages([0, 1]);
+                break
+            case 4: showImages([0, 1, 2]);
+                break
+            case 5: showImages([0, 1, 2, 3]);
+                break
+            case 6: showImages([0, 1, 2, 3, 4]);
+                break
+            case 8: showImages([0, 1, 2, 3, 4, 5]);
+                break
+        }
+    })
 
     return (
         <div className='w-full my-12'>

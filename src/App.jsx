@@ -1,3 +1,5 @@
+import LocomotiveScroll from 'locomotive-scroll';
+
 import Cards from "./components/Cards"
 import Footer from "./components/Footer"
 import Marquees from "./components/Marquees"
@@ -7,6 +9,9 @@ import Stripes from "./components/Stripes"
 import Work from "./components/Work"
 
 function App() {
+
+  const locomotiveScroll = new LocomotiveScroll();
+
   return (
     <div className="min-h-screen w-full bg-gray-800 text-white">
       <NavBar />
